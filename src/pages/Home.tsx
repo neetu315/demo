@@ -126,7 +126,7 @@ export default function Home({ navigate }: { navigate: (page: string) => void })
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80",
-            "https://images.unsplash.com/photo-1529139574466-a303027c028b?w=600&q=80",
+            "/photo/streatwear.jpg",
             "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&q=80",
             "https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&q=80"
           ].map((img, i) => (
