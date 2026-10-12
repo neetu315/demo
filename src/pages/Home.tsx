@@ -87,26 +87,44 @@ export default function Home({ navigate }: { navigate: (page: string) => void })
             View All Products
           </button>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            { name: "Casual Wear", image: "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=800&q=80" },
-            { name: "Streetwear", image: "/photo/streatwear.jpg"},
-            { name: "Formal Outfits", image: "https://images.unsplash.com/photo-1594938298596-afbb4f59fcb0?w=800&q=80" },
-            { name: "Seasonal", image: "https://images.unsplash.com/photo-1434389678219-158fb7e0ce37?w=800&q=80" }
-          ].map((item, i) => (
-            <div key={i} className="group cursor-pointer" onClick={() => navigate('products')}>
-              <div className="aspect-[3/4] bg-stone-200 rounded-2xl overflow-hidden mb-4">
-                <img 
-                  src={item.image} 
-                  alt={item.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <h3 className="font-medium text-lg">{item.name}</h3>
-              <p className="text-stone-500 text-sm">Shop Now &rarr;</p>
-            </div>
-          ))}
-        </div>
+        
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  {[
+    {
+      name: "Casual Wear",
+      image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80"
+    },
+    {
+      name: "Streetwear",
+      image: "https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=800&q=80"
+    },
+    {
+      name: "Formal Outfits",
+      image: "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=800&q=80"
+    },
+    {
+      name: "Seasonal",
+      image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80"
+    }
+  ].map((item, i) => (
+    <div
+      key={i}
+      className="group cursor-pointer"
+      onClick={() => navigate("products")}
+    >
+      <div className="aspect-[3/4] bg-stone-200 rounded-2xl overflow-hidden mb-4">
+        <img
+          src={item.image}
+          alt={item.name}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+      </div>
+      <h3 className="font-medium text-lg">{item.name}</h3>
+      <p className="text-stone-500 text-sm">Shop Now →</p>
+    </div>
+  ))}
+</div>
+
         <button 
           onClick={() => navigate('products')}
           className="text-stone-900 font-medium hover:underline md:hidden mt-4 text-center"
